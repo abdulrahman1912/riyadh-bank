@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./Airtime.css">
+    <title>Airtime Recharge</title>
+</head>
+
+<body>
+    <div class="Airtime">
+        <div class="content">
+            <div class="airtime-transfer">
+                <div class="airtime-info">
+                    <div class="airtime-head">
+                        <div class="bank-name">
+                            <h3>Riyadh <span>Bank</span></h3>
+                        </div>
+                    </div>
+                    <div class="transfer-head">
+                        <i class="bi bi-arrow-left-short"></i>
+                        <h5>Airtime Recharge</h5>
+                    </div>
+                </div>
+                <form action="" method="post">
+                    <div class="airtimetransfer-info">
+                        <div class="source-acct">
+                            <div class="input-info">
+                                <h5>Source Account</h5>
+                                <center>
+                                    <input placeholder="Account Number" type="text"
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                        maxlength="10">
+                                </center>
+
+                            </div>
+                        </div>
+                        <div class="balance">
+                            <h5>Balance</h5>
+                            <center>
+                                <div class="display-balance">
+                                    <h5>100,000.59</h5>
+                                </div>
+                            </center>
+                        </div>
+                        <div class="select-airtime">
+                            <div class="input-info">
+                                <h5><label for="network-name">Network</label></h5>
+                                <center>
+                                    <input placeholder="Select your Network" name="network-name" list="network-names"
+                                        id="network-name">
+                                    <datalist id="network-names">
+                                        <option value="MTN">
+                                        <option value="GLO">
+                                        <option value="AIRTEL">
+                                        <option value="9MOBILE">
+                                    </datalist>
+                                </center>
+
+                            </div>
+                        </div>
+                        <div class="amount">
+                            <div class="input-info">
+                                <h5>Amount</h5>
+                                <center>
+                                    <input placeholder="0.00" type="text"
+                                        oninput="this.value = this.value.replace(/[^0-7.]/g, '').replace(/(\..*)\./g, '$1');"
+                                        maxlength="10">
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                    <center>
+                        <div class="confirm-btn">
+                            <a href=""><button>Confirm Transfer</button></a>
+                        </div>
+                    </center>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+</body>
+
+</html>

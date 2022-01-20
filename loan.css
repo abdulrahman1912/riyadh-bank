@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+ 
+.content{
+    padding: 0px 25px ;
+    margin: 0 auto;
+    max-width: 1250px;
+} 
+
+
+a{
+    text-decoration: none ;
+    color: #000000;
+}
+ 
+a:hover{
+    color: #000000;
+}
+
+
+.loan{
+    background: #fffdd1;
+height: 100vh;
+width: auto;
+padding-top: 35px ;
+}
+
+.loan-option{
+    margin: 0 auto;
+    width: 30%;
+    height: 80vh;
+    background-color: #F6E8B1;
+    border-right:  1px solid  #000000;
+    border-bottom:  1px solid  #000000;
+    border-left:  1px solid  #000000;
+   
+}
+
+.loan-info{
+    flex-direction: column;
+}
+
+.loan-head{
+    width: 100%;
+    height: 25vh;
+    background: url(./img/pexels-worldspectrum-844124.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    flex-direction: column;
+}
+
+.bank-name{
+    width: 30%;
+    height:12vh;
+    /* background-color: blueviolet; */
+    padding: 25px 0px 0px 10px;
+    font-size: 20px;
+    font-family: 'Rock Salt', cursive;
+}
+.bank-name h3{
+    color: #FFFDD1;
+}
+
+.transfer-head{
+    width: 100%;
+    height: 5vh;
+    background-color: #D4CAA3;
+    display: flex;
+   padding: 8px;
+}
+
+.transfer-head h5{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+
+.transfer-head i{
+font-size: 20px;
+font-weight: 900;
+cursor:pointer;
+}
+
+.Rloan-info{
+  flex-direction: column;
+  padding: 25px 15px 0px 15px;    
+}
+
+
+.loan-container{
+    flex-direction: column;
+    padding: 15px;
+    line-height: 35px;
+}
+
+
+.loan-container h3{
+    font-size: 16px;
+    color: #948342;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.loan-container h4{
+    font-size: 14px;
+    color: #000000b7;
+}
+
+.transfer2{
+    margin-top: 35px;
+}
+
+.transfer3{
+    margin-top: 35px;
+}

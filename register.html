@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./register.css">
+    <title>Register</title>
+</head>
+<body>
+
+    <div class="register">
+        <div class="content">
+            <center>
+                <div class="register-columns">
+                    <div class="register1">
+                        <div class="register-info">
+                            <center>
+                            <div class="heading">
+                                <p>A few clicks away from creating your <span> Riyadh Bank</span> Account</p>
+                            </div>
+
+                            <div class="form">
+                                <div class="sub-heading">
+                                    <h3>Register</h3>
+                                </div>
+                                <div class="user-register-columns">
+                                    <div class="column">
+                                        <div class="column-info">
+                                            <div class="input-info">
+                                                <h6>Full Name</h6>
+                                                <input type="text" id="name">
+                                            </div>
+                                            <div class="input-info">
+                                                <h6>Phone Number</h6>
+                                                <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                maxlength="11" id="phone">
+                                            </div>
+                                            <div class="input-info">
+                                                <h6>Password</h6>
+                                                <input type="password" id="password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="column-info">
+                                            <div class="input-info">
+                                                <h6>Email</h6>
+                                                <input type="email" id="email">
+                                            </div>
+                                            <div class="input-info">
+                                                <h6>Account Number</h6>
+                                                <input type="text"
+                                                maxlength="15" id="account-number">
+                                                
+                                            </div>
+                                            <div class="input-info">
+                                                <h6>Confirm Password</h6>
+                                                <input type="password" id="password1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="check-box2">
+                                    <input type="checkbox" name="box" value="Remember Me">
+                                    <h6>I agree to all the <span><a href="#">Terms & Conditions</a></span> and <span><a
+                                                href="#">Privacy Policy</a></span></h6>
+                                </div>
+                                <div class="register-btn">
+                                    <button id="signup-btn">Create Account</button>
+                                </div>
+                                <div class="login">
+                                    <h6>Already have an account? <a href="./index.html">Log in</a></h6>
+                                </div>
+                            </div>
+
+                        </center>
+                        </div>
+                    </div>
+                    <div class="register2">
+                        <div class="register-img">
+
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </div>
+    
+    <script type="module" src="scripts/signup.js"></script>
+</body>
+</html>
