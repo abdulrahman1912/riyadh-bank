@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+ 
+.content{
+    padding: 0px 25px ;
+    margin: 0 auto;
+    max-width: 1250px;
+} 
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: #000000;
+}
+
+.register{
+    background: #fffdd1;
+height: 100vh;
+width: auto;
+}
+
+.register-columns{
+    display: flex;
+    padding-top: 60px;
+}
+
+.register1{
+    height: 80vh;
+    width: 60%;
+    background-color: #FFFEF2;
+}
+
+.register2{
+    height: 80vh;
+    width: 40%;
+    background-color: #D4CAA3;
+    background: url(./img/pexels-mihai-vlasceanu-1400249.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.heading{
+    margin-top: 20px;
+    font-size: 21px;
+}
+
+.heading span{
+    font-weight: 700;
+}
+
+.form{
+    margin: -20px 20px;
+}
+.sub-heading{
+    margin: 60px 0px 0px 0px;
+    text-align: left;
+}
+
+
+.sub-heading h6{
+    margin-top: 20px;
+    font-weight: 600;
+    
+}
+
+.user-register-columns{
+    display: flex;
+    text-align: left;
+}
+
+.user-register-columns h6{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.user-register-columns .column{
+    flex: 0 0 50%;
+}
+
+.user-register-columns .column .column-info{
+    margin-top: 30px;
+    height: 200px;
+    /* background-color: blue; */
+}
+
+.input-info{
+    margin: 30px 0px;
+}
+
+.input-info input{
+    margin-top: 10px;
+    height: 40px;
+    display: block;
+    width: 90%;
+    padding: 0px 10px;
+    outline: none;
+    border:none;
+    transition: 0.2s;
+    border-radius: 5px;
+    background-color: #C4C4C4;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.input-info input:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+.check-box2{
+    margin-top: 85px;
+    display: flex;
+}
+
+.check-box2 h6{
+    margin: 0px 5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.check-box2 a{
+    text-decoration: none;
+    color: #948342;
+}
+
+.check-box2 input
+{
+    height: 15px;
+    width: 15px;
+}
+
+.register-btn{
+    margin-top: 30px;
+    text-align: left;
+}
+.register-btn button{
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: black;
+    border: none;
+    background-color: #D4CAA3;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+
+}
+
+.register-btn button:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+.login{
+    margin-top: 20px;
+    text-align: left;
+}
+
+.login h6{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login a{
+    text-decoration: none;
+    color: #948342;
+}
+
