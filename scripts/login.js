@@ -46,7 +46,6 @@ loginBtn.addEventListener('click', () =>{
     users.map(user => {
         if(user.email === email.value && user.password === password.value){
             found = true;
-            window.location.replace = '/bank.html';
             userDetails = user;
             console.log(user)
         }
