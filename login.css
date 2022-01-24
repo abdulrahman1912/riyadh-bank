@@ -110,6 +110,10 @@ margin-top: 35px;
     font-size: 15px;
 }
 
+.password h6{
+    font-size: 15px;
+}
+
 .username input{
     height: 40px;
     display: block;
@@ -199,11 +203,11 @@ margin-top: 35px;
     text-decoration: underline;
 }
 
-.sign-btn{
+.sign-btn1{
     margin-top: 50px;
 }
 
-.sign-btn button{
+.sign-btn1 button{
     width: 150px;
     height: 40px;
     cursor: pointer;
@@ -216,11 +220,11 @@ margin-top: 35px;
 }
 
 
-.sign-btn button:hover{
+.sign-btn1 button:hover{
     transform: scale(1.03);
     transition: 0.3s;
 }
-.sign-btn a{
+.sign-btn1 a{
 text-decoration: none;
 color: #000;
 }
