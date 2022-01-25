@@ -50,6 +50,7 @@ signUpBtn.addEventListener('click', async() => {
       account_number: account_number.value,
       account_balance: 0
     };
+    localStorage.setItem('user', JSON.stringify(newUser));
     
     console.log(email.value)
     createUserWithEmailAndPassword(auth, email.value, password.value)
@@ -77,6 +78,7 @@ signUpBtn.addEventListener('click', async() => {
         alert('Password is too weak');
       } else {
         alert('Error creating user');
+        console.error(error);
       }
     })
   

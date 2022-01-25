@@ -44,7 +44,7 @@
                             <div class="input-info">
                                 <h5>Source Account</h5>
                                 <center>
-                                    <input placeholder="Account Number" type="text"
+                                    <input placeholder="Account Number" type="text" id="source-acc"
                                         oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                                         maxlength="10">
                                 </center>
@@ -87,6 +87,12 @@
     </div>
     <script src="https://stephenlb.github.io/spoken/spoken.js"></script>
     <script src="scripts/transfer.js"></script>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('user'));
+        const source = document.querySelector('#source-acc');
+        source.value = user.account_number;
+    </script>
 </body>
 
 </html>

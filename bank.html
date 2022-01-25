@@ -105,12 +105,15 @@
                             <h3>Riyadh <span>Bank</span></h3>
                         </div>
                         <div class="hi">
-                            <h3>Hi Abdulrahman</h3>
+                            <h3 id="greeting">Hi Abdulrahman</h3>
                         </div>
                     </div>
                     <div class="account-head">
                         <h3>Accounts</h3>
-                        <h3 style="cursor: pointer;">Balance</h3>
+                        <span style="display:flex;width:fit-content;align-items:center;">
+                            <h3 style="cursor: pointer;">Balance:</h3>
+                            <h3 id="account-balance"></h3>
+                        </span>
                     </div>
                     <div class="home-info">
                         <div class="savings-tab">
@@ -118,8 +121,8 @@
                                 <h4>Savings</h4>
                             </div>
                             <div class="save-info">
-                                <h4>Abdullahi Abdulrahman</h4>
-                                <h4>22365999000 <a href="./account.html"><i class="bi bi-caret-right-fill"></i></a></h4>
+                                <h4 id="customer-name"></h4> <!--Name of Customer-->
+                                <h4 id="customer-num"></h4><a href="./account.html"><i class="bi bi-caret-right-fill"></i></a>
                             </div>
                         </div>
 
@@ -161,12 +164,12 @@
         </div>
     </div>
 
-    <script>
+    <script type="module">
         import spoken from './node_modules/spoken/build/spoken.js';
 
         spoken.say("Welcome to the Riyadh Bank Home page");
     </script>
-    <script src="scripts/info.js"></script>
+    <script type="module" src="scripts/info.js"></script>
 </body>
 
 </html>
