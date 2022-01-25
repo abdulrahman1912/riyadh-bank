@@ -31,7 +31,7 @@
                             <div class="input-info">
                                 <h5>Source Account</h5>
                                 <center>
-                                    <input placeholder="Account Number" type="text"
+                                    <input placeholder="Account Number" type="text" id="source-acc"
                                         oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                                         maxlength="10">
                                 </center>
@@ -42,7 +42,7 @@
                             <h5>Balance</h5>
                             <center>
                                 <div class="display-balance">
-                                    <h5>100,000.59</h5>
+                                    <h5 id="balance"></h5>
                                 </div>
                             </center>
                         </div>
@@ -66,7 +66,7 @@
                             <div class="input-info">
                                 <h5>Amount</h5>
                                 <center>
-                                    <input placeholder="0.00" type="text"
+                                    <input placeholder="0.00" type="text" id="amount"
                                         oninput="this.value = this.value.replace(/[^0-7.]/g, '').replace(/(\..*)\./g, '$1');"
                                         maxlength="10">
                                 </center>
@@ -75,7 +75,7 @@
                     </div>
                     <center>
                         <div class="confirm-btn">
-                            <a href=""><button>Confirm Transfer</button></a>
+                            <button>Confirm Payment</button>
                         </div>
                     </center>
                 </form>
@@ -85,6 +85,21 @@
 
         </div>
     </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('user'));
+        const source = document.querySelector('#source-acc');
+        const button = document.getElementsByTagName('button')[0];
+        const balance = document.querySelector('#balance');
+        const amount = document.querySelector('#amount');
+
+        source.value = user.account_number;
+        balance.innerHTML = user.account_balance;
+        
+        button.addEventListener('click', () => {
+            alert("Airtime recharge sucessful!")
+        })
+    </script>
 </body>
 
 </html>
