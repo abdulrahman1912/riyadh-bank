@@ -45,7 +45,7 @@
                     </div>
                     <center>
                         <div class="confirm-btn">
-                            <a href=""><button>AGREED</button></a>
+                            <button>AGREED</button>
                         </div>
                     </center>
 
@@ -53,6 +53,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const button = document.getElementsByTagName('button')[0];
+        button.addEventListener('click', ()=> {
+            alert("Thank you for agreeing to our terms!")
+            button.disabled = true;
+            button.style.backgroundColor = 'black';
+            button.style.color = 'white';
+        })
+    </script>
 </body>
 
 </html>

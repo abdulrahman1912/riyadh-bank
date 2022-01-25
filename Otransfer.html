@@ -93,6 +93,25 @@
         const source = document.querySelector('#source-acc');
         source.value = user.account_number;
     </script>
+
+    <script type="module">
+        import spoken from './node_modules/spoken/build/spoken.js';
+        const amount = document.querySelector('#amount');
+
+        spoken.say("Transfer Money. How much do you want to transfer?").then(speech => {
+            spoken.listen().then(words => {
+                amount.value = words
+            })
+        })
+
+        const button = document.getElementsByTagName('button')[0];
+        button.addEventListener('click', ()=> {
+            alert("Transfer sucessful!")
+            spoken.say("Transfer Successful!")
+        })
+
+    </script>
+
 </body>
 
 </html>

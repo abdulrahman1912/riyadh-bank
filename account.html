@@ -29,7 +29,7 @@
                     <div class="home-container">
                         <div class="acct-name">
                             <h3>Account Name</h3>
-                            <h4>Abdullahi Abdulrahman Adeiza</h4>
+                            <h4 id="customer-name">Abdullahi Abdulrahman Adeiza</h4>
                         </div>
                         <div class="acct-type">
                             <h3>Account Type</h3>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="acct-balance">
                             <h3>Account Balance</h3>
-                            <h4>100,000.59</h4>
+                            <h4 id="account-balance">100,000.59</h4>
                         </div>
                     </div>
                 </div>
@@ -45,6 +45,17 @@
 
         </div>
     </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('user'));
+        console.log(user);
+
+        const nameHolder = document.querySelector('#customer-name');
+        const accBalance = document.querySelector('#account-balance');
+
+        nameHolder.innerHTML = user.name;
+        accBalance.innerHTML = user.account_balance+".00";
+    </script>
 </body>
 
 </html>
