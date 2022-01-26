@@ -15,6 +15,10 @@ body{
     max-width: 1250px;
 } 
 
+a{
+    text-decoration: none;
+}
+
 
 .Airtime{
     background: #fffdd1;
@@ -74,11 +78,26 @@ padding-top: 20px ;
     margin: 0 auto;
 }
 
+.bank-name{
+    width: 30%;
+    height:12vh;
+    /* background-color: blueviolet; */
+    padding: 25px 0px 0px 10px;
+    font-size: 20px;
+    font-family: 'Rock Salt', cursive;
+}
+.bank-name h3{
+    color: #FFFDD1;
+}
 
 .transfer-head i{
 font-size: 20px;
 font-weight: 900;
 cursor:pointer;
+}
+
+.transfer-head a{
+    color: #000000;
 }
 
 .airtimetransfer-info{

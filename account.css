@@ -8,6 +8,10 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+
+a{
+    text-decoration: none;
+}
  
 .content{
     padding: 0px 25px ;
@@ -68,6 +72,10 @@ padding-top: 35px ;
 
 .account-arrow h3{
     font-size: 18px;
+    color: #FFFDD1;
+}
+
+.account-arrow a{
     color: #FFFDD1;
 }
 

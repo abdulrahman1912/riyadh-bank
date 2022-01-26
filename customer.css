@@ -75,6 +75,9 @@ padding-top: 25px ;
     margin: 0 auto;
 }
 
+.transfer-head a{
+    color: #000000;
+}
 
 .transfer-head i{
 font-size: 20px;
