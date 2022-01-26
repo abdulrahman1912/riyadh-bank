@@ -39,7 +39,7 @@
                             <div class="input-info">
                                 <h5>Amount</h5>
                                 <center>
-                                    <input  placeholder="0.00" type="text" oninput="this.value = this.value.replace(/[^0-7.]/g, '').replace(/(\..*)\./g, '$1');"
+                                    <input  placeholder="0.00" type="number" oninput="this.value = this.value.replace(/[^0-7.]/g, '').replace(/(\..*)\./g, '$1');"
                                     maxlength="10" id="amount">
                                 </center>
                             </div>
@@ -57,7 +57,17 @@
             </div>
         </div>
     </div>
-    <script>
+
+    <script type="module">
+        import spoken from './node_modules/spoken/build/spoken.js';
+        const amount = document.querySelector('#amount');
+
+        spoken.say("Pay back a loan. How much do you want to pay back?").then(speech => {
+            spoken.listen().then(words => {
+                amount.value = words
+            })
+        })
+
         const user = JSON.parse(localStorage.getItem('user'));
         const source = document.querySelector('#source-acc');
         source.value = user.account_number;
@@ -75,17 +85,6 @@
                 localStorage.setItem('user', JSON.stringify(user))
             }
 
-        })
-    </script>
-
-    <script type="module">
-        import spoken from './node_modules/spoken/build/spoken.js';
-        const amount = document.querySelector('#amount');
-
-        spoken.say("Pay back a loan. How much do you want to pay back?").then(speech => {
-            spoken.listen().then(words => {
-                amount.value = words
-            })
         })
     </script>
 
