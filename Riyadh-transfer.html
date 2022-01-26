@@ -90,8 +90,16 @@
 
         const button = document.getElementsByTagName('button')[0];
         button.addEventListener('click', ()=> {
-            alert("Transfer sucessful!")
-            spoken.say("Transfer Successful!")
+            if(amount.value > user.account_balance){
+                alert("Insufficient funds");
+                spoken.say("Your balance is too low!")
+            } else {
+                alert("Transfer sucessful!")
+                spoken.say("Transfer Successful!")
+                user.account_balance -= amount.value;
+
+                localStorage.setItem('user', JSON.stringify(user))
+            }
         })
 
     </script>

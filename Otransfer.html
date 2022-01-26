@@ -88,16 +88,15 @@
     <script src="https://stephenlb.github.io/spoken/spoken.js"></script>
     <script src="scripts/transfer.js"></script>
 
-    <script>
+    <script type="module">
+        import spoken from './node_modules/spoken/build/spoken.js';
+        
         const user = JSON.parse(localStorage.getItem('user'));
         const source = document.querySelector('#source-acc');
         source.value = user.account_number;
-    </script>
-
-    <script type="module">
-        import spoken from './node_modules/spoken/build/spoken.js';
+        
+        
         const amount = document.querySelector('#amount');
-
         spoken.say("Transfer Money. How much do you want to transfer?").then(speech => {
             spoken.listen().then(words => {
                 amount.value = words
@@ -106,8 +105,16 @@
 
         const button = document.getElementsByTagName('button')[0];
         button.addEventListener('click', ()=> {
-            alert("Transfer sucessful!")
-            spoken.say("Transfer Successful!")
+            if(amount.value > user.account_balance){
+                alert("Insufficient funds");
+                spoken.say("Your balance is too low!")
+            } else {
+                alert("Transfer sucessful!")
+                spoken.say("Transfer Successful!")
+                user.account_balance -= amount.value;
+
+                localStorage.setItem('user', JSON.stringify(user))
+            }
         })
 
     </script>

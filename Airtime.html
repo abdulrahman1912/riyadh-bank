@@ -97,7 +97,17 @@
         balance.innerHTML = user.account_balance;
         
         button.addEventListener('click', () => {
-            alert("Airtime recharge sucessful!")
+            if(amount.value > user.account_balance){
+                alert("Insufficient funds");
+                spoken.say("Your balance is too low!")
+            } else {
+                alert("Airtime recharge sucessful!")
+                spoken.say("Reacharge Successful!")
+                user.account_balance -= amount.value;
+
+                localStorage.setItem('user', JSON.stringify(user))
+            }
+            
         })
     </script>
 </body>

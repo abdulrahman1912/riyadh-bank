@@ -29,7 +29,7 @@
                                 <h5>Source Account</h5>
                                 <center>
                                     <input  placeholder="Account Number" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                    maxlength="10">
+                                    maxlength="10" id="source-acc">
                                 </center>
                               
                             </div>
@@ -40,7 +40,7 @@
                                 <h5>Amount</h5>
                                 <center>
                                     <input  placeholder="0.00" type="text" oninput="this.value = this.value.replace(/[^0-7.]/g, '').replace(/(\..*)\./g, '$1');"
-                                    maxlength="10">
+                                    maxlength="10" id="amount">
                                 </center>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                
                 <center>
                     <div class="confirm-btn">
-                        <a href=""><button>Confirm Payment</button></a> 
+                        <button>Confirm Payment</button>
                      </div>
                 </center>
                 
@@ -57,5 +57,38 @@
             </div>
         </div>
     </div>
+    <script>
+        const user = JSON.parse(localStorage.getItem('user'));
+        const source = document.querySelector('#source-acc');
+        source.value = user.account_number;
+
+        const button = document.getElementsByTagName('button')[0];
+        button.addEventListener('click', ()=> {
+            if(amount.value > user.account_balance){
+                alert("Insufficient funds");
+                spoken.say("Your balance is too low!")
+            } else {
+                alert('Loan paid back sucessfully!')
+                spoken.say("Loan paid back sucessfully!")
+                user.account_balance -= amount.value;
+
+                localStorage.setItem('user', JSON.stringify(user))
+            }
+
+        })
+    </script>
+
+    <script type="module">
+        import spoken from './node_modules/spoken/build/spoken.js';
+        const amount = document.querySelector('#amount');
+
+        spoken.say("Pay back a loan. How much do you want to pay back?").then(speech => {
+            spoken.listen().then(words => {
+                amount.value = words
+            })
+        })
+    </script>
+
 </body>
+
 </html>
