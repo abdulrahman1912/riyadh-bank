@@ -79,6 +79,15 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const font_size = document.getElementsByClassName('option3')[0];
+        font_size.addEventListener('click', ()=>{
+            let font = prompt("What font size you want to use?");
+            console.log(font);
+            document.body.style.fontSize = font;
+        })
+    </script>
 </body>
 
 </html>

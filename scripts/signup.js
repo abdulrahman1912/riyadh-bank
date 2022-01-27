@@ -48,7 +48,7 @@ signUpBtn.addEventListener('click', async() => {
       email: email.value,
       phone: phone.value,
       account_number: account_number.value,
-      account_balance: 0
+      account_balance: 100000
     };
     localStorage.setItem('user', JSON.stringify(newUser));
     
@@ -64,7 +64,7 @@ signUpBtn.addEventListener('click', async() => {
         phone: phone.value,
         password: password.value,
         account_number: account_number.value,
-        account_balance: 0
+        account_balance: 10000
       });
     })
     .then(() => window.location.pathname = '/bank.html')
